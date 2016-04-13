@@ -101,7 +101,7 @@ gulp.task('clear', function() {
 
 //Запуск сервера
 // gulp.task('watch', ['browser-sync', 'css-libs', 'scripts', ], function() {
-gulp.task('watch', ['browser-sync', 'css-libs', 'htmlhint', ], function() {
+gulp.task('watch', ['browser-sync', 'css-libs', 'htmlhint', 'img',], function() {
 
    gulp.watch('src/sass/**/*.sass', ['sass'], browserSync.reload);
    gulp.watch('src/*.html', browserSync.reload);
@@ -110,11 +110,9 @@ gulp.task('watch', ['browser-sync', 'css-libs', 'htmlhint', ], function() {
 
 //билд всего в папку dist
 // gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function() {
-gulp.task('build', ['clean', 'img', 'sass',], function() {
+gulp.task('build', ['clean', 'clear', 'img', 'sass', 'css-libs',], function() {
 
-   var buildCss = gulp.src([
-         'src/css/**/*.css',
-      ])
+   var buildCss = gulp.src(['src/css/**/*.css',])
       .pipe(gulp.dest('dist/css'));
 
    var buildFonts = gulp.src(['src/fonts/**/*', ])
