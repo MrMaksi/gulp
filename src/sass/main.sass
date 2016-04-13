@@ -1,0 +1,402 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,300,700&subset=latin,cyrillic)
+@import breakpoint.sass
+
+=placeholder
+   &::-webkit-input-placeholder
+      @content
+   &::-moz-placeholder
+      @content
+   &:-moz-placeholder
+      @content
+   &:-ms-input-placeholder
+      @content
+
+
+$primary: #fff
+$secondary: #313131
+$color: #11acf6
+$alt: #ffcc00
+
+.btn
+   height: 35px
+   margin-bottom: 15px
+   transition: all .3s linear
+   text-align: center
+   text-transform: uppercase
+   color: $primary
+   border: 1px solid #fff
+   border-radius: 5px
+   background-color: transparent
+   font-size: 13px
+   line-height: 22px
+   &:hover
+      color: $secondary
+      border: 1px solid transparent
+      background-color: $alt
+
+body
+   color: $secondary
+   font-family: Roboto
+   font-weight: 400
+   -webkit-font-smoothing: antialiased
+   -webkit-text-size-adjust: 100%
+   h2
+      text-transform: uppercase
+
+.navbar
+   position: absolute
+   z-index: 10
+   width: 100%
+   margin-bottom: 0
+   border: initial
+   border-radius: initial
+
+   .navbar-brand
+      display: inline-block
+      width: 58px
+      height: 93px
+      margin-top: 15px
+      margin-left: 10px!important
+      background-image: url("../images/logo.png")
+      background-repeat: no-repeat
+      background-size: 100%
+   .navbar-collapse
+      margin-top: 29px
+   .nav
+      li
+         a
+            padding: 10px 15px 10px 15px
+            transition: .3s
+            color: $primary
+            font-size: 16px
+            &.login
+               position: relative
+               padding-right: 43px
+               font-style: italic
+
+               &:after
+                  display: inline-block
+                  width: 22px
+                  height: 26px
+                  margin-top: -2px
+                  margin-left: 8px
+                  content: ""
+                  vertical-align: middle
+                  background-image: url(../images/log-in.png)
+                  background-repeat: no-repeat
+                  background-size: 100%
+            &:focus
+               background-color: initial
+               outline: none
+
+            &.lang
+               margin-top: 6px
+               padding: 3px 5px 5px 5px
+               border: 1px solid
+
+   .aside-nav
+      float: right
+      a
+         &:hover
+            background-color: initial
+   .main-nav
+      margin-left: 46px
+      li
+         padding-right: 10px
+         a
+            position: relative
+            font-weight: 100
+            &:after
+               position: absolute
+               top: 100%
+               content: ""
+               transition: all .5s linear
+               border-bottom: 2px solid transparent
+            &:hover
+               background-color: initial
+               &:after
+                  position: absolute
+                  top: 31px
+                  left: 15px
+                  width: 20px
+                  height: 2px
+                  content: ""
+                  background-color: $alt
+            &.active
+               position: relative
+               font-weight: 500
+               &:after
+                  position: absolute
+                  top: 31px
+                  left: 15px
+                  width: 20px
+                  height: 2px
+                  content: ""
+                  background-color: $alt
+         &:last-child
+            padding-right: initial
+
+#topBlock
+   position: relative
+   height: 660px
+   padding-top: 230px
+   color: $primary
+   z-index: 9
+   // background-image: url("../images/bcg.jpg")
+   // background-position: 50% 66%
+   // background-size: cover
+
+   &:after
+      background-image: url("../images/pattern.png")
+      background-repeat: repeat
+      position: absolute
+      content: ""
+      width: 100%
+      height: 100%
+      top: 0
+      opacity: .5
+      
+   // .pattern
+   //    background-image: url("../images/pattern.png")
+   //    background-repeat: repeat
+   //    width: 100%
+   //    height: 100%
+   //    position: absolute
+   //    top: 0
+   //    left: 0
+   //    opacity: .5
+   //    z-index: 10
+   .bgrVideo
+      z-index: 550
+      text-align: center
+      height: 100%
+      min-height: 100%
+      position: relative
+      overflow: hidden
+
+   
+   .topBlockWrapper
+      margin-left: 11px
+      z-index: 11
+      position: relative
+   h1
+      margin-top: 40px
+      // margin-left: 10px
+      letter-spacing: -1px
+      text-transform: uppercase
+      font-size: 28px
+      font-weight: 500
+   h2
+      width: 500px
+      text-transform: initial
+      font-weight: 100
+      font-size: 18px
+      margin-top: 20px
+      // margin-left: 11px
+      line-height: 23px
+   .btn
+      display: inline-block
+      width: 142px
+      margin-top: 27px
+      margin-right: 15px
+
+      // &.colorBtn
+      //    width: 182px
+      //    height: 33px
+      //    margin-top: 14px
+      //    letter-spacing: .4px
+      //    background-color: $color
+      //    line-height: 17px
+
+      // &.transparentBtn
+      //    width: 151px
+      //    height: 33px
+      //    margin-top: 28px
+      //    padding: 4px 0 0 17px
+      //    border: 1px solid #fff
+      //    background-color: transparent
+
+#overview
+   padding: 0 0 30px 36px
+   background-color: #fafafa
+   .diamond
+      position: relative
+      margin-top: 70px
+      &:after
+         position: absolute
+         z-index: 1
+         right: 50%
+         left: 50%
+         top: -12px
+         width: 80px
+         height: 80px
+         margin: auto
+         content: ""
+         transform: rotate(-45deg)
+         transform-origin: 0 100%
+         text-align: center
+         border: 1px solid $alt
+         background-color: transparent
+
+
+      h2
+         // margin-bottom: 29px
+         // padding-top: 47px
+         // letter-spacing: .8px
+         font-size: 20px
+         font-weight: 400
+         text-align: center
+         position: relative
+         z-index: 10
+      
+   p
+      margin-bottom: 26px
+      letter-spacing: .8px
+      line-height: 26px
+      &:nth-child(4)
+         margin-bottom: 28px
+   .btn-dark
+      display: block
+      width: 42px
+      height: 42px
+      background-image: url("../images/arrow.png")
+
+
+#buns
+   padding-bottom: 100px
+   background-image: url(../images/bcg-dots.png)
+   background-repeat: no-repeat
+   background-position: center
+   background-size: cover
+   h2
+      margin: 74px 0 43px 18px
+      letter-spacing: .8px
+      font-size: 28px
+      font-weight: 700
+
+   .bunsWrapper
+      position: relative
+      margin-bottom: 30px
+      padding: 1px 20px 44px 19px
+      border-radius: 4px
+      background-color: #fafafa
+      box-shadow: 0 1px 4px rgba(0, 0, 0, .3)
+      &:after
+         position: absolute
+         bottom: 18px
+         left: 18px
+         width: 260px
+         height: 2px
+         content: ""
+         background-color: #2e92f0
+      h3
+         letter-spacing: .8px
+         text-transform: uppercase
+         font-size: 16px
+         font-weight: 700
+      p
+         line-height: 19px
+
+      .icon
+         display: inline-block
+         width: 45px
+         height: 35px
+         vertical-align: middle
+         background-repeat: no-repeat
+         background-size: contain
+         &.icon1
+            background-image: url("../images/bins-icon1.png")
+         &.icon2
+            background-image: url("../images/bins-icon2.png")
+
+
+#partner
+   padding: 53px 0 32px
+   background-color: #fafafa
+   .owl-carousel
+      width: 85%
+      margin: auto
+   .partner-wrapp
+      text-align: center
+
+
+footer
+   padding-top: 53px
+   color: #989898
+   background-color: $secondary
+   ul
+      padding-left: 0
+   li
+      list-style-type: none
+      a
+         color: #989898
+   .nav-bottom
+      padding-left: 4px
+      font-size: 16px
+      li
+         padding-bottom: 4px
+   .soc
+      display: inline-block
+      width: 26px
+      height: 26px
+      margin-top: 6px
+      margin-bottom: 6px
+      padding-left: 35px
+      vertical-align: middle
+      background-repeat: no-repeat
+      background-size: contain
+      &.gplus
+         background-image: url("../images/soc-gplus.png")
+      &.telegram
+         background-image: url("../images/soc-telegram.png")
+      &.in
+         background-image: url("../images/soc-in.png")
+      &.fb
+         background-image: url("../images/soc-fb.png")
+   .email
+      padding-left: 23px
+      float: right
+      .logo-bottom
+         background-image: url("../images/logo-footer.png")
+         display: inline-block
+         background-repeat: no-repeat
+         width: 32px
+         height: 39px
+         margin-right: 22px
+         vertical-align: middle
+         margin-top: 7px
+   .subs
+      margin-top: 24px
+      line-height: 18px
+   #newsletter
+      width: 300px
+      height: 36px
+      input
+         width: 80%
+         height: 100%
+         border: none
+         padding-left: 15px
+         vertical-align: bottom
+         +placeholder
+            color: #989898
+         &:focus
+            +placeholder
+               color: transparent
+      button
+         width: 12%
+         background-image: url("../images/arrows-color.png")
+         background-repeat: no-repeat
+         background-size: 100%
+         background-position: center
+         height: 100%
+         padding: 0px
+         border: none
+         cursor: pointer
+         outline: none
+
+
+
+
+
+
+
