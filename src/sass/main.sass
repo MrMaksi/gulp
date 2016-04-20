@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,300,700&subset=latin,cyrillic)
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,300,700|Lora:400,700&subset=latin,cyrillic)
 @import breakpoint.sass
 
 =placeholder
@@ -11,9 +11,11 @@
    &:-ms-input-placeholder
       @content
 
-
+//fonts
 $primary: #fff
 $secondary: #313131
+$dblue: #2b5264
+//background
 $color: #11acf6
 $alt: #ffcc00
 
@@ -34,14 +36,50 @@ $alt: #ffcc00
       border: 1px solid transparent
       background-color: $alt
 
+
 body
    color: $secondary
    font-family: Roboto
    font-weight: 400
+
    -webkit-font-smoothing: antialiased
    -webkit-text-size-adjust: 100%
    h2
       text-transform: uppercase
+   .diamond
+      position: relative
+      text-align: center
+      letter-spacing: .8px
+      color: $dblue
+      font-size: 20px
+      font-weight: 700
+      &:before
+         position: absolute
+         right: 0
+         bottom: -4px
+         left: 0
+         width: 60px
+         height: 60px
+         margin: auto
+         content: ""
+         transform: rotate(226deg)
+         border-right: 1px solid $alt
+         border-bottom: 1px solid $alt
+      &:after
+         position: absolute
+         top: -4px
+         right: 0
+         left: 0
+         width: 60px
+         height: 60px
+         margin: auto
+         content: ""
+         transform: rotate(46deg)
+         border-right: 1px solid $alt
+         border-bottom: 1px solid $alt
+   .bxsh
+      box-shadow: 0 0 10px #d4d4d4
+
 
 .navbar
    position: absolute
@@ -56,7 +94,7 @@ body
       width: 58px
       height: 93px
       margin-top: 15px
-      margin-left: 10px!important
+      margin-left: 0!important
       background-image: url("../images/logo.png")
       background-repeat: no-repeat
       background-size: 100%
@@ -71,9 +109,8 @@ body
             font-size: 16px
             &.login
                position: relative
-               padding-right: 43px
+               padding-right: 46px
                font-style: italic
-
                &:after
                   display: inline-block
                   width: 22px
@@ -86,14 +123,13 @@ body
                   background-repeat: no-repeat
                   background-size: 100%
             &:focus
-               background-color: initial
                outline: none
+               background-color: initial
 
             &.lang
-               margin-top: 6px
-               padding: 3px 5px 5px 5px
+               margin: 8px 14px 0 0
+               padding: 0 2px 2px 3px
                border: 1px solid
-
    .aside-nav
       float: right
       a
@@ -102,7 +138,7 @@ body
    .main-nav
       margin-left: 46px
       li
-         padding-right: 10px
+         padding-right: 9px
          a
             position: relative
             font-weight: 100
@@ -136,200 +172,224 @@ body
          &:last-child
             padding-right: initial
 
+
 #topBlock
    position: relative
+   z-index: 9
    height: 660px
    padding-top: 230px
    color: $primary
-   z-index: 9
-   // background-image: url("../images/bcg.jpg")
-   // background-position: 50% 66%
-   // background-size: cover
+   background-image: url("../images/bcg.jpg")
+   background-repeat: no-repeat
+   background-attachment: fixed
 
-   &:after
-      background-image: url("../images/pattern.png")
-      background-repeat: repeat
-      position: absolute
-      content: ""
-      width: 100%
-      height: 100%
-      top: 0
-      opacity: .5
-      
-   // .pattern
-   //    background-image: url("../images/pattern.png")
-   //    background-repeat: repeat
-   //    width: 100%
-   //    height: 100%
-   //    position: absolute
-   //    top: 0
-   //    left: 0
-   //    opacity: .5
-   //    z-index: 10
-   .bgrVideo
-      z-index: 550
-      text-align: center
-      height: 100%
-      min-height: 100%
-      position: relative
-      overflow: hidden
-
-   
-   .topBlockWrapper
-      margin-left: 11px
-      z-index: 11
-      position: relative
    h1
       margin-top: 40px
-      // margin-left: 10px
       letter-spacing: -1px
       text-transform: uppercase
-      font-size: 28px
+      font-family: Lora
+      font-size: 34px
       font-weight: 500
    h2
       width: 500px
+      margin-top: 18px
       text-transform: initial
-      font-weight: 100
       font-size: 18px
-      margin-top: 20px
-      // margin-left: 11px
+      font-weight: 100
       line-height: 23px
    .btn
       display: inline-block
       width: 142px
-      margin-top: 27px
+      margin-top: 22px
       margin-right: 15px
 
-      // &.colorBtn
-      //    width: 182px
-      //    height: 33px
-      //    margin-top: 14px
-      //    letter-spacing: .4px
-      //    background-color: $color
-      //    line-height: 17px
-
-      // &.transparentBtn
-      //    width: 151px
-      //    height: 33px
-      //    margin-top: 28px
-      //    padding: 4px 0 0 17px
-      //    border: 1px solid #fff
-      //    background-color: transparent
 
 #overview
-   padding: 0 0 30px 36px
+   padding: 0 0 30px 0
    background-color: #fafafa
-   .diamond
-      position: relative
-      margin-top: 70px
-      &:after
-         position: absolute
-         z-index: 1
-         right: 50%
-         left: 50%
-         top: -12px
-         width: 80px
-         height: 80px
-         margin: auto
-         content: ""
-         transform: rotate(-45deg)
-         transform-origin: 0 100%
-         text-align: center
-         border: 1px solid $alt
-         background-color: transparent
-
-
-      h2
-         // margin-bottom: 29px
-         // padding-top: 47px
-         // letter-spacing: .8px
-         font-size: 20px
-         font-weight: 400
-         text-align: center
-         position: relative
-         z-index: 10
-      
-   p
-      margin-bottom: 26px
-      letter-spacing: .8px
-      line-height: 26px
-      &:nth-child(4)
-         margin-bottom: 28px
-   .btn-dark
-      display: block
-      width: 42px
-      height: 42px
-      background-image: url("../images/arrow.png")
-
-
-#buns
-   padding-bottom: 100px
-   background-image: url(../images/bcg-dots.png)
-   background-repeat: no-repeat
-   background-position: center
-   background-size: cover
    h2
-      margin: 74px 0 43px 18px
-      letter-spacing: .8px
-      font-size: 28px
-      font-weight: 700
+      margin-top: 71px
+   .col-about
+      margin-top: 30px
 
-   .bunsWrapper
+   .colWrapper
       position: relative
-      margin-bottom: 30px
-      padding: 1px 20px 44px 19px
-      border-radius: 4px
-      background-color: #fafafa
-      box-shadow: 0 1px 4px rgba(0, 0, 0, .3)
-      &:after
-         position: absolute
-         bottom: 18px
-         left: 18px
-         width: 260px
-         height: 2px
-         content: ""
-         background-color: #2e92f0
+      margin-top: 69px
+      font-size: 0
+      .col5
+         display: inline-block
+         width: 20%
+         padding-right: 15px
+         padding-left: 15px
+         &:first-child
+            padding-left: 0
+         &:last-child
+            padding-right: 0
+      .col5Wrapper
+         height: 100px
+         background-color: $primary
+         .iconWrapper
+            position: relative
+            display: inline-block
+            width: 80px
+            vertical-align: top
+            &:after
+               position: absolute
+               top: 4px
+               right: 0
+               width: 1px
+               height: 90%
+               content: ""
+               background-color: #a2a2a2
+            .icon
+               display: block
+               width: 60px
+               height: 60px
+               margin-top: 20px
+               margin-bottom: 18px
+               margin-left: 10px
+               vertical-align: middle
+               background-repeat: no-repeat
+               background-size: contain
+               &.icon1
+                  background-image: url("../images/icon1.png")
+               &.icon2
+                  background-image: url("../images/icon2.png")
+               &.icon3
+                  background-image: url("../images/icon3.png")
+               &.icon4
+                  background-image: url("../images/icon4.png")
+               &.icon5
+                  background-image: url("../images/icon5.png")
+         .infoWrapper
+            position: relative
+            display: inline-block
+            padding-left: 10px
+            vertical-align: top
+            h3
+               margin-top: 13px
+               margin-bottom: 5px
+               color: $dblue
+               font-size: 28px
+               font-weight: 700
+            p
+               color: #808080
+               font-size: 16px
+               line-height: 20px
+
+   .aboutWrapper
+      padding: 40px 40px 28px 40px
+      background-color: $primary
       h3
-         letter-spacing: .8px
-         text-transform: uppercase
-         font-size: 16px
+         margin: 9px 0 19px 0
+         font-size: 20px
          font-weight: 700
       p
-         line-height: 19px
+         padding-bottom: 10px
+         line-height: 23px
+      .btn
+         margin-top: 7px
+         color: $secondary
+         background-color: $alt
+         &:hover
+            background-color: darken( $alt, 2% )
 
+   .subscribe
+      margin-top: 30px
+      padding-bottom: 52px
+      background-image: url(../images/subscribe.jpg)
+      background-repeat: no-repeat
+      background-position: center
+      background-size: cover
+      p
+         padding-top: 45px
+         text-align: center
+         color: #8a8c8e
+         font-size: 18px
+         font-style: italic
+      form
+         margin-top: 28px
+         text-align: center
+         input
+            width: 240px
+            height: 30px
+            margin-right: -2px
+            padding-left: 10px
+            vertical-align: middle
+            border: initial
+            box-shadow: 0 0 10px #ccc
+         button
+            height: 36px
+            padding: 0 10px
+            transition: .4s ease
+            vertical-align: middle
+            text-transform: uppercase
+            border: initial
+            background-color: $alt
+            font-size: 14px
+            font-weight: 400
+            &:hover
+               background-color: darken( $alt, 2% )
+
+   .fourBlock
+      margin-top: 30px
+      .mainWrapp
+         height: 250px
+         margin-bottom: 30px
+         background-color: #fff
       .icon
          display: inline-block
-         width: 45px
-         height: 35px
+         width: 95px
+         height: 90px
+         margin-left: 37px
          vertical-align: middle
          background-repeat: no-repeat
+         background-position: center
          background-size: contain
-         &.icon1
-            background-image: url("../images/bins-icon1.png")
-         &.icon2
-            background-image: url("../images/bins-icon2.png")
-
-
-#partner
-   padding: 53px 0 32px
-   background-color: #fafafa
-   .owl-carousel
-      width: 85%
-      margin: auto
-   .partner-wrapp
-      text-align: center
-
+         &.icon6
+            background-image: url("../images/icon6.png")
+         &.icon7
+            background-image: url("../images/icon7.png")
+         &.icon8
+            background-image: url("../images/icon8.png")
+         &.icon9
+            background-image: url("../images/icon9.png")
+      .wrapper
+         display: inline-block
+         width: 75%
+         padding-left: 26px
+         vertical-align: middle
+         h2
+            margin-top: 35px
+            text-transform: initial
+            font-size: 20px
+         p
+            margin-top: 26px
+            line-height: 22px
+         .arrow
+            display: block
+            width: 40px
+            height: 40px
+            margin-top: 18px
+            transition: .4s ease
+            background-image: url("../images/arrow.png")
+            background-repeat: no-repeat
+            background-position: center
+            background-size: contain
+            &:hover
+               border-radius: 40px
+               box-shadow: 0 0 5px lighten( $alt, 5% )
 
 footer
    padding-top: 53px
-   color: #989898
-   background-color: $secondary
+   color: $primary
+   background-color: #172d37
    ul
       padding-left: 0
    li
       list-style-type: none
       a
-         color: #989898
+         color: $primary
    .nav-bottom
       padding-left: 4px
       font-size: 16px
@@ -354,17 +414,17 @@ footer
       &.fb
          background-image: url("../images/soc-fb.png")
    .email
-      padding-left: 23px
       float: right
+      padding-left: 23px
       .logo-bottom
-         background-image: url("../images/logo-footer.png")
          display: inline-block
-         background-repeat: no-repeat
          width: 32px
          height: 39px
+         margin-top: 7px
          margin-right: 22px
          vertical-align: middle
-         margin-top: 7px
+         background-image: url("../images/logo-footer.png")
+         background-repeat: no-repeat
    .subs
       margin-top: 24px
       line-height: 18px
@@ -374,9 +434,10 @@ footer
       input
          width: 80%
          height: 100%
-         border: none
          padding-left: 15px
          vertical-align: bottom
+         border: none
+
          +placeholder
             color: #989898
          &:focus
@@ -384,19 +445,14 @@ footer
                color: transparent
       button
          width: 12%
-         background-image: url("../images/arrows-color.png")
-         background-repeat: no-repeat
-         background-size: 100%
-         background-position: center
          height: 100%
-         padding: 0px
-         border: none
+         margin-left: -3px
+         padding: 0
          cursor: pointer
+         vertical-align: middle
+         border: none
          outline: none
-
-
-
-
-
-
-
+         background-image: url("../images/arrow-footer.png")
+         background-repeat: no-repeat
+         background-position: center
+         background-size: 100%

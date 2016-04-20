@@ -14,13 +14,11 @@
     "gulp-htmlhint": "^0.3.1",
     "gulp-imagemin": "^2.4.0",
     "gulp-plumber": "^1.1.0",
-    "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.2.0",
-    "gulp-uglifyjs": "^0.6.2",
     "gulp-uncss": "^1.0.5",
     "imagemin-pngquant": "^4.2.2"
   },
-  "description": "first gulp project",
+  "description": "gulp project",
   "main": "gulpfile.js",
   "dependencies": {},
   "scripts": {
