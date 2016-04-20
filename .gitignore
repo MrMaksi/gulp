@@ -1,3 +1,6 @@
 dist/
 node_modules/
 
+src/images/
+src/js/
+.map
